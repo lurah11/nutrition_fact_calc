@@ -1,0 +1,111 @@
+[
+    {
+        "type":"takaran_saji",
+        "rules_ts":["0 100000 0.5"], 
+        "location":"1",
+        "style":""
+    },
+    {
+        "type":"energi_total",
+        "rules_ha":["0 5 0","5 50 5","50 100000 10"],
+        "location":"2",
+        "style":"Tebal",
+        "unit_ha":"kkal"
+    },
+    {
+        "type":"lemak_total",
+        "rules_ha":["0 0.5 0","0.5 5 0.5","5 100000 1"],
+        "location":"3",
+        "style":"Tebal",
+        "unit_ha":"g",
+        "rules_akg":["0 0 0","0 100000 1"],
+        "energy":9,
+        "write_ind":"Lemak total",
+        "write_eng":"Total Fat"
+    },
+    {
+        "type":"lemak_jenuh",
+        "parent":"lemak_total",
+        "rules_ha":["0 0.5 0","0.5 5 0.5","5 100000 1"],
+        "location":"3",
+        "style":"Tebal Menjorok",
+        "unit_ha":"g",
+        "rules_akg":["0 0 0","0 100000 1"],
+        "write_ind":"Lemak jenuh",
+        "write_eng":"Saturated Fat"
+    },
+    {
+        "type":"protein",
+        "rules_ha":["0 0.5 0","0.5 100000 1"],
+        "location":"3",
+        "style":"Tebal",
+        "unit_ha":"g",
+        "rules_akg":["0 0 0","0 100000 1"],
+        "energy":4,
+        "write_ind":"Protein",
+        "write_eng":"Protein"
+    },
+    {
+        "type":"karbohidrat_total",
+        "rules_ha":["0 0.5 0","0.5 100000 1"],
+        "location":"3",
+        "style":"Tebal",
+        "unit_ha":"g",
+        "rules_akg":["0 0 0","0 100000 1"],
+        "energy": 4,
+        "write_ind":"Karbohidrat total",
+        "write_eng":"Total Carbohydrate"
+    },
+    {
+        "type":"gula",
+        "parent":"karbohidrat_total",
+        "rules_ha":["0 0.5 0","0.5 100000 1"],
+        "location":"3",
+        "style":"Tebal Menjorok",
+        "unit_ha":"g",
+        "write_ind":"Gula",
+        "write_eng" : "Sugar"
+    },
+    {
+        "type":"garam",
+        "rules_ha":["0 0.5 0","5 140 5","140 100000 10"],
+        "location":"3",
+        "style":"Tebal",
+        "unit_ha":"mg",
+        "rules_akg":["0 0 0","0 100000 1"],
+        "write_ind":"Garam (natrium)",
+        "write_eng":"Salt (sodium)"
+    },
+    {
+        "type":"lemak_trans",
+        "parent":"lemak_total",
+        "rules_ha":["0 0.5 0","0.5 5 0.5","5 100000 1"],
+        "location":"3",
+        "style":"Menjorok",
+        "unit_ha":"g",
+        "write_ind":"Lemak trans(italic)", 
+        "write_eng":"Trans(italic) Fat"
+    },
+    {
+        "type":"kolesterol",
+        "parent":"lemak_total",
+        "rules_ha":["0 2 0","2 5 1","5 100000 5"],
+        "location":"3",
+        "style":"Tebal Menjorok",
+        "unit_ha":"mg",
+        "rules_akg":["0 0 0","0 100000 1"],
+        "write_ind":"Kolesterol",
+        "write_eng":"Cholesterol"
+    },
+    {
+        "type":"serat_pangan",
+        "parent":"karbohidrat_total",
+        "rules_ha":["0 0.5 0","0.5 100000 1"],
+        "location":"3",
+        "style":"Menjorok",
+        "unit_ha":"g",
+        "rules_akg":["0 0 0","0 100000 1"],
+        "write_ind":"Serat pangan",
+        "write_eng":"Dietary Fiber"
+    }
+]
